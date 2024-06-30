@@ -1,4 +1,19 @@
 @media screen and (max-width: 1024px) {
+    .container{
+        padding: 0 20px;
+    }
+    header{
+        .container{
+            padding-top: 17px;
+            padding-bottom: 12px;
+        }
+        .logo{
+            max-width: 126px;
+        }
+    }
+    header .mobile-container{
+        display: none;
+    }
 }
 
 
