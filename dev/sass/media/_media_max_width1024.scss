@@ -21,7 +21,7 @@
         left:0;
         right: 0;
         top: 69px;
-        transition: 0.3s;
+        transition: all 0.3s;
         transform: translate(-100%, 0);
         padding: 37px 40px 60px;
         box-shadow: 14px 22px 40px 0 rgba(30, 35, 66, 0.28);
@@ -29,6 +29,7 @@
         
         &.show{
             transform: translate(0, 0);
+            transition: .3s;
         }
         
         nav{
@@ -53,6 +54,9 @@
             font-size: 16px;
             letter-spacing: 0;
         }
+    }
+    .hamburger{
+        display: block;
     }
 }
 
