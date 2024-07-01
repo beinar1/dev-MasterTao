@@ -9,51 +9,65 @@ header{
         padding: 13px 21px;
         font-weight: 600;
     }
-
-    .mobile-container{
-        display: flex;
-        width: 100%;
-
-        nav{
-            display: flex;
-            gap: 45px;
-            align-items: center;
-            font-weight: 400;
-            margin: 0 auto;
-            a{
-                color: #fff;
-                text-decoration: none;
-                &:hover{
-                    color: $color-primary;
-                }
-            }
-        }
-    }
 }
 
 .btn-burger{
     position: relative;
     border: none;
     margin: 6px 0 0 auto;
+    width: 27.5px;
+    height: 25px;
+    background-color: transparent;
+    border-top: 2px solid #fff;
+    &:hover,
+    &:hover::before,
+    &:hover::after{
+        border-color: $color-primary;
+    }
+    &::before,
+    &::after{
+        content: "";
+        border-top: 2px solid #fff;
+        height: 2px;
+        width: 27.5px;
+        display: inline-block;
+    }
+
+    &::before,
+    &::after{
+        position: absolute;
+        top: 10px;
+        left: 0;
+    }
+
+    &::after{
+        top: 21px;
+    }
 }
 
-.btn-burger,
-.btn-burger::before,
-.btn-burger::after{
-    content: "";
-    background: #fff;
-    height: 2px;
-    width: 28px;
-    display: inline-block;
-}
 
-.btn-burger::before,
-.btn-burger::after{
-    position: absolute;
-    top: 12px;
-    left: 0;
-}
 
-.btn-burger::after{
-    top: 24px;
+.mobile-container{
+    display: flex;
+    width: 100%;
+
+    nav{
+        display: flex;
+        gap: 45px;
+        align-items: center;
+        font-weight: 400;
+        margin: 0 auto;
+        a{
+            color: #fff;
+            text-decoration: none;
+            &:hover{
+                color: $color-primary;
+            }
+        }
+    }
+
+    &.show{
+        display: flex;
+
+    }
 }
