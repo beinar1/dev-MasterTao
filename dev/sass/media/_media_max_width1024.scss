@@ -57,6 +57,45 @@
     .hamburger{
         display: block;
     }
+
+    .banner 
+    {
+        .container{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        padding: 0;
+        &-slider {
+            height: calc(100vh - 69.2px);
+            border-radius: 0;
+          }
+
+        .swiper-slide{
+            border-radius: 0;
+            padding: 0 20px;
+            text-align: center;
+            background-size: cover;
+            background-position: center;
+
+            &::before{
+                content: "";
+                position: absolute;
+                left: 0;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                background-color: #04051199;
+                z-index: -1;
+            }
+            h1 {
+                font-size: 32px;
+            }
+            h5 {
+                font-size: 16px;
+            }
+        }
+    }
 }
 
 
