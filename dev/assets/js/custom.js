@@ -34,3 +34,12 @@
         },
       }
     });
+
+const typeFile = document.querySelectorAll('.custom-file')
+
+typeFile.forEach(item=>{
+  item.addEventListener('change', ()=> {
+    const fileName = item.closest('.control-box').querySelector('.file-name')
+    fileName.innerHTML = item.files[0].name;
+  })
+});
