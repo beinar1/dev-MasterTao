@@ -1,3 +1,9 @@
+.calculation{
+    .container{
+    position: relative;
+    }
+}
+
 .calculation-form {
     padding: 47px 50px 61px;
     background: $bg-secondary;
@@ -16,13 +22,16 @@
 }
 
 .input-box {
-    margin: 0 0 17px;
+    margin: 0 0 18px;
+    &:last-child{
+        margin-bottom: 17px;
+    }
 }
 
 .control-box {
     margin-bottom: 14px;
     &:first-child{
-        margin-top: 23px;
+        margin-top: 22px;
     }
     label{
         font-size: 15px;
@@ -42,9 +51,25 @@
         cursor: pointer;
         border-radius: 10px;
         transition: 0.3s;
+        margin-bottom: -12px;
         &:hover{
             border-color: $color-secondary;
             color: $color-secondary;
         }
     }
+}
+
+.file-name {
+    font-size: 15px;
+    line-height: 0.7;
+    margin: 0px 0px -11px 0px;
+}
+
+.calculation-decoration{
+    position: absolute;
+    left: 613px;
+    bottom: -$section-margin-lg;
+    min-width: 370px;
+    width: 29.167vw;
+    max-width: 560px;
 }
