@@ -2,4 +2,14 @@
     .btn-burger{
         display: none;
     }
+
+    .advantages{
+        .swiper-wrapper{
+            flex-wrap: wrap;
+            gap: 23px 0;
+        }
+        .swiper-slide{
+            max-width: 25%;
+        }
+    }
 }

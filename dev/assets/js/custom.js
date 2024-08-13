@@ -10,7 +10,7 @@
 
   burger.addEventListener('click', toggleClass)
 
-  const swiper = new Swiper('.banner-slider', {
+  const swiperBanner = new Swiper('.banner-slider', {
       loop: true,
       spaceBetween: 20,
       
@@ -42,4 +42,31 @@ typeFile.forEach(item=>{
     const fileName = item.closest('.control-box').querySelector('.file-name')
     fileName.innerHTML = item.files[0].name;
   })
+});
+
+const advantagesSlideLenght = document.querySelectorAll('.advantages .swiper-slide').length
+
+
+const swiperAdvantages = new Swiper('#advantages', {
+  spaceBetween: 12,
+  loop: true,
+  simulateTouch: true,
+  slidesPerView: 1,
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+    enabled: true,
+  },
+  breakpoints:{
+    1025:{
+      spaceBetween: 0,
+      loop: false,
+      slidesPerGroup: advantagesSlideLenght,
+      simulateTouch: false,
+      pagination: {
+        enabled: false,
+        el: '.swiper-pagination',  
+      }
+    }
+  }
 });
